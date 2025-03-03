@@ -368,35 +368,30 @@ public class PlaywrightService implements AutoCloseable {
         String marketingPercent;
         String markupPercent;
         String promoMarkupPercent;
+        marketingPercent = "2,00";
 
         if (price <= 100.0) {
             logger.debug("Applying rules for price range: R$ 1,00 - R$ 100,00");
-            marketingPercent = "20,00";
             markupPercent = "25,00";
             promoMarkupPercent = "20,00";
         } else if (price <= 200.0) {
             logger.debug("Applying rules for price range: R$ 101,00 - R$ 200,00");
-            marketingPercent = "20,00";
             markupPercent = "25,00";
             promoMarkupPercent = "15,00";
         } else if (price <= 300.0) {
             logger.debug("Applying rules for price range: R$ 201,00 - R$ 300,00");
-            marketingPercent = "10,00";
             markupPercent = "20,00";
             promoMarkupPercent = "15,00";
         } else if (price <= 400.0) {
             logger.debug("Applying rules for price range: R$ 301,00 - R$ 400,00");
-            marketingPercent = "10,00";
             markupPercent = "15,00";
             promoMarkupPercent = "10,00";
         } else if (price <= 500.0) {
             logger.debug("Applying rules for price range: R$ 401,00 - R$ 500,00");
-            marketingPercent = "5,00";
             markupPercent = "20,00";
             promoMarkupPercent = "10,00";
         } else {
             logger.debug("Applying rules for price range: > R$ 501,00");
-            marketingPercent = "5,00";
             markupPercent = "15,00";
             promoMarkupPercent = "10,00";
         }
